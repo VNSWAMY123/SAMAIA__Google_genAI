@@ -15,13 +15,17 @@ app.get('/', (req, res) => {
   res.json({ 
     message: 'Welcome to the Global Youth Wellness Backend API!',
     version: '1.0.0',
-    status: 'running'
+    status: 'running',
+    features: ['Gemini AI Integration', 'Wellness Advice', 'Mental Health Support']
   });
 });
 
 // Import and use API routes
 const apiRoutes = require('./routes');
+const geminiRoutes = require('./routes/gemini');
+
 app.use('/api', apiRoutes);
+app.use('/api/gemini', geminiRoutes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {
@@ -45,4 +49,5 @@ app.listen(PORT, () => {
   console.log(`🚀 Server is running on port ${PORT}`);
   console.log(`📍 Environment: ${process.env.NODE_ENV || 'development'}`);
   console.log(`🌐 API available at: http://localhost:${PORT}`);
+  console.log(`🤖 Gemini AI endpoints available at: http://localhost:${PORT}/api/gemini`);
 });
