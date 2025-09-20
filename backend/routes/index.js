@@ -1,24 +1,21 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
+const geminiRoutes = require("./gemini");
+const mentalHealthRoutes = require("./mental-health");
+const riskRoutes = require("./risk");
 
-// Example route - can be expanded with more specific routes
-router.get('/health', (req, res) => {
+// Health check route
+router.get("/health", (req, res) => {
   res.json({
-    status: 'OK',
-    message: 'Backend server is running',
-    timestamp: new Date().toISOString()
+    status: "OK",
+    message: "Backend server is running",
+    timestamp: new Date().toISOString(),
   });
 });
 
-// Example API route
-router.get('/test', (req, res) => {
-  res.json({
-    message: 'Test route working!',
-    data: {
-      version: '1.0.0',
-      environment: process.env.NODE_ENV || 'development'
-    }
-  });
-});
+// Mount route modules
+router.use("/gemini", geminiRoutes);
+router.use("/mental-health", mentalHealthRoutes);
+router.use("/risk", riskRoutes);
 
 module.exports = router;

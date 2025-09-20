@@ -1,6 +1,6 @@
-# Contributing to Global Youth Wellness
+# Contributing to SAMAIA
 
-Thank you for your interest in contributing to Global Youth Wellness! We welcome contributions from developers, designers, mental health professionals, youth advocates, and anyone passionate about improving youth wellness through technology.
+Thank you for your interest in contributing to SAMAIA! We welcome contributions from developers, designers, mental health professionals, and anyone passionate about improving mental wellness through AI technology.
 
 ## Table of Contents
 - [Code of Conduct](#code-of-conduct)
@@ -13,7 +13,7 @@ Thank you for your interest in contributing to Global Youth Wellness! We welcome
 
 ## Code of Conduct
 
-This project adheres to our [Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to [conduct@globalyouthwellness.org](mailto:conduct@globalyouthwellness.org).
+This project adheres to our [Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to [conduct@samaia.app](mailto:conduct@samaia.app).
 
 ## How to Contribute
 
@@ -34,10 +34,10 @@ We value your ideas! When suggesting enhancements:
 ## Types of Contributions
 
 ### Development
-- **Frontend Development**: React.js, TypeScript, Tailwind CSS
-- **Backend Development**: Node.js, Express.js, PostgreSQL
-- **Mobile Development**: React Native (future roadmap)
-- **DevOps**: CI/CD, deployment, monitoring
+- **Frontend Development**: React.js, TypeScript, Tailwind CSS, Framer Motion
+- **AI Integration**: Google Gemini API, AI prompt engineering
+- **Authentication**: Firebase Auth, user session management
+- **UI/UX**: Glassmorphism design, animations, responsive layouts
 
 ### Design
 - **UI/UX Design**: User interface and experience design
@@ -46,10 +46,10 @@ We value your ideas! When suggesting enhancements:
 - **User Research**: Conducting studies with youth users
 
 ### Content
-- **Mental Health Content**: Evidence-based articles and resources
+- **AI Prompt Engineering**: Improving therapeutic conversation quality
+- **Mental Health Content**: Evidence-based wellness resources
 - **Documentation**: Technical and user documentation
-- **Translations**: Multilingual support
-- **Community Moderation**: Forum and discussion management
+- **Crisis Resource Updates**: Maintaining support resource accuracy
 
 ### Testing
 - **Quality Assurance**: Manual testing and bug reporting
@@ -60,10 +60,11 @@ We value your ideas! When suggesting enhancements:
 ## Development Setup
 
 ### Prerequisites
-- Node.js (v16 or higher)
+- Node.js (v18 or higher)
 - npm or yarn
 - Git
-- PostgreSQL (for backend development)
+- Google Gemini API Key
+- Firebase project setup
 
 ### Getting Started
 
@@ -82,7 +83,7 @@ We value your ideas! When suggesting enhancements:
 3. **Set up environment variables**
    ```bash
    cp .env.example .env
-   # Edit .env with your configuration
+   # Add your Gemini API key and Firebase configuration
    ```
 
 4. **Start development server**
@@ -111,7 +112,7 @@ We value your ideas! When suggesting enhancements:
 3. **Commit your changes**
    ```bash
    git add .
-   git commit -m "feat: add new wellness tracking feature"
+   git commit -m "feat: add new AI mood analysis feature"
    ```
 
 4. **Push to your fork**
@@ -181,10 +182,10 @@ We follow the [Conventional Commits](https://www.conventionalcommits.org/) speci
 ## Community
 
 ### Communication Channels
-- **Discord**: [Join our community server](https://discord.gg/globalyouthwellness)
-- **Email**: [dev@globalyouthwellness.org](mailto:dev@globalyouthwellness.org)
+- **GitHub Issues**: Primary communication for bugs and features
+- **Email**: [dev@samaia.app](mailto:dev@samaia.app)
 - **GitHub Discussions**: For longer conversations about features and ideas
-- **Monthly Community Calls**: First Saturday of each month
+- **Pull Request Reviews**: Code collaboration and feedback
 
 ### Recognition
 We recognize contributors in several ways:
@@ -196,22 +197,29 @@ We recognize contributors in several ways:
 
 ### Getting Help
 - Check existing documentation and issues first
-- Join our Discord for real-time help
-- Attend our community calls for guidance
-- Reach out to maintainers directly for complex questions
+- Use GitHub Discussions for questions
+- Email maintainers for complex technical questions
+- Review the README for setup instructions
 
 ## Special Considerations
 
-### Youth Privacy and Safety
-- All contributors must respect youth privacy
-- Follow COPPA and GDPR guidelines
+### User Privacy and Safety
+- All contributors must respect user privacy and data protection
+- Follow GDPR and privacy best practices
 - Report any safety concerns immediately
-- Maintain confidentiality of user data
+- Maintain confidentiality of user conversations and data
 
 ### Mental Health Content
-- Mental health content must be reviewed by qualified professionals
-- Avoid providing direct medical advice
+- AI prompts and mental health content must be reviewed by qualified professionals
+- Avoid providing direct medical advice through AI responses
 - Include appropriate disclaimers and crisis resources
 - Use trauma-informed language and approaches
+- Ensure crisis detection algorithms are properly tested
 
-Thank you for contributing to Global Youth Wellness! Together, we're building a healthier future for young people worldwide. 🌍💚
+### AI Ethics
+- Ensure AI responses are unbiased and inclusive
+- Test AI prompts for harmful or inappropriate responses
+- Maintain transparency about AI capabilities and limitations
+- Respect user autonomy in AI interactions
+
+Thank you for contributing to SAMAIA! Together, we're building a more supportive future for mental wellness through AI. 💜🤖

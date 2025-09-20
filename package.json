@@ -1,32 +1,36 @@
 {
-  "name": "global-youth-wellness",
-  "version": "0.1.0",
+  "name": "samaia-wellness-app",
+  "version": "1.0.0",
   "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=16.0.0"
+  },
   "dependencies": {
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.3.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.11.47",
-    "@types/react": "^18.0.15",
-    "@types/react-dom": "^18.0.6",
+    "@google/generative-ai": "^0.24.1",
+    "@types/firebase": "^2.4.32",
+    "firebase": "^12.2.1",
+    "framer-motion": "^12.23.15",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "typescript": "^4.7.4",
-    "web-vitals": "^2.1.4"
+    "react-firebase-hooks": "^5.1.1"
   },
   "devDependencies": {
-    "@types/testing-library__jest-dom": "^5.14.5",
+    "@types/node": "^20.11.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@vitejs/plugin-react": "^5.0.3",
     "autoprefixer": "^10.4.8",
     "postcss": "^8.4.16",
-    "tailwindcss": "^3.1.8"
+    "tailwindcss": "^3.1.8",
+    "typescript": "^4.9.5",
+    "vite": "^5.0.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "vite --config vite.config.js",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "vite --config vite.config.js"
   },
   "eslintConfig": {
     "extends": [
