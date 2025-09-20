@@ -372,11 +372,11 @@ We welcome contributions to make SAMAIA even better! Here's how you can help:
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 ## 👥 Our Team
 
-- [V N Swamy]((https://www.linkedin.com/in/v-n-swamy-72ba87322/))  
-- [Priya Vijay Palekar](https://www.linkedin.com/in/priya-palekar-750b4435a/))  
-- [Krupasham S Jadhav]((https://www.linkedin.com/in/krupasham-s-jadhav-80a61031a/))  
-- [Srinidhi N]((https://www.linkedin.com/in/srinidhi-nagaraj-05b66b374))  
-- [Divya Sharma]((http://www.linkedin.com/in/divya-sharma-22b735295))
+- [V N Swamy](https://www.linkedin.com/in/v-n-swamy-72ba87322/)  
+- [Priya Vijay Palekar](https://www.linkedin.com/in/priya-palekar-750b4435a/)
+- [Krupasham S Jadhav](https://www.linkedin.com/in/krupasham-s-jadhav-80a61031a/) 
+- [Srinidhi N](https://www.linkedin.com/in/srinidhi-nagaraj-05b66b374)
+- [Divya Sharma](http://www.linkedin.com/in/divya-sharma-22b735295)
 
 
 ## 🙏 Acknowledgments
