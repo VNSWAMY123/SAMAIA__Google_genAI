@@ -3,12 +3,12 @@ import { getAuth, connectAuthEmulator } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCp-hqPwkmx0KkNYVxFBmrOg7ePVtJTpPM",
-  authDomain: "mentalwellness-9685a.firebaseapp.com",
-  projectId: "mentalwellness-9685a",
-  storageBucket: "mentalwellness-9685a.appspot.com",
-  messagingSenderId: "263603657751",
-  appId: "1:263603657751:web:aec7081dafb3908ecad052",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY || "AIzaSyCp-hqPwkmx0KkNYVxFBmrOg7ePVtJTpPM",
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || "mentalwellness-9685a.firebaseapp.com",
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || "mentalwellness-9685a",
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET || "mentalwellness-9685a.appspot.com",
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID || "263603657751",
+  appId: import.meta.env.VITE_FIREBASE_APP_ID || "1:263603657751:web:aec7081dafb3908ecad052",
 };
 
 // Initialize Firebase

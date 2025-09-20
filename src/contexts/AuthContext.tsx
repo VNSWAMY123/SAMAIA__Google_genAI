@@ -1,7 +1,9 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
 import {
   GoogleAuthProvider,
   signInWithPopup,
+  signInWithRedirect,
+  getRedirectResult,
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
   sendPasswordResetEmail,
@@ -84,9 +86,25 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   async function signInWithGoogle() {
     try {
       const provider = new GoogleAuthProvider();
-      await signInWithPopup(auth, provider);
+      provider.addScope('email');
+      provider.addScope('profile');
+      
+      // Try popup first, fallback to redirect if blocked
+      try {
+        await signInWithPopup(auth, provider);
+      } catch (popupError: any) {
+        if (popupError.code === 'auth/popup-blocked' || 
+            popupError.code === 'auth/popup-closed-by-user' ||
+            popupError.code === 'auth/cancelled-popup-request') {
+          // Fallback to redirect method
+          await signInWithRedirect(auth, provider);
+        } else {
+          throw popupError;
+        }
+      }
     } catch (error: any) {
-      throw new Error(error.message);
+      console.error('Google Sign-In Error:', error);
+      throw new Error(error.message || 'Failed to sign in with Google');
     }
   }
 
@@ -107,6 +125,17 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }
 
   useEffect(() => {
+    // Handle redirect result from Google Sign-In
+    getRedirectResult(auth)
+      .then((result) => {
+        if (result?.user) {
+          console.log('Google Sign-In redirect successful:', result.user.uid);
+        }
+      })
+      .catch((error) => {
+        console.error('Redirect result error:', error);
+      });
+
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       setCurrentUser(user);
       setLoading(false);
