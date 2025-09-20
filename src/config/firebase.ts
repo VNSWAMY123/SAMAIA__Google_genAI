@@ -15,6 +15,13 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
+// Debug: Log configuration status
+console.log("Firebase config loaded:", {
+  hasApiKey: !!firebaseConfig.apiKey,
+  authDomain: firebaseConfig.authDomain,
+  projectId: firebaseConfig.projectId
+});
+
 // Only connect to emulator in development
 if (process.env.NODE_ENV === "development") {
   console.log("Using auth emulator");

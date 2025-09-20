@@ -56,7 +56,7 @@ export default function AuthScreen() {
             className="mb-4"
           >
             <h1 className="text-4xl font-bold text-indigo-600 mb-2">
-              Mental Wellness
+              SAMAIA
             </h1>
             <div className="text-6xl mb-4">🧘‍♂️</div>
           </motion.div>
@@ -64,7 +64,7 @@ export default function AuthScreen() {
             Welcome to Your Wellness Journey
           </h2>
           <p className="text-gray-600">
-            Sign in to access your personalized mental wellness tools and track your progress.
+            Sign in to access your personalized SAMAIA tools and track your progress.
           </p>
         </div>
 
