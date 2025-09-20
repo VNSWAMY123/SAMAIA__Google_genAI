@@ -6,9 +6,10 @@ const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY || "AIzaSyCp-hqPwkmx0KkNYVxFBmrOg7ePVtJTpPM",
   authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || "mentalwellness-9685a.firebaseapp.com",
   projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || "mentalwellness-9685a",
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET || "mentalwellness-9685a.appspot.com",
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET || "mentalwellness-9685a.firebasestorage.app",
   messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID || "263603657751",
   appId: import.meta.env.VITE_FIREBASE_APP_ID || "1:263603657751:web:aec7081dafb3908ecad052",
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID || "G-5FGE63BSXL",
 };
 
 // Initialize Firebase
