@@ -27,10 +27,10 @@
     "vite": "^5.0.0"
   },
   "scripts": {
-    "dev": "vite --config vite.config.js",
+    "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "start": "vite --config vite.config.js"
+    "start": "vite"
   },
   "eslintConfig": {
     "extends": [
