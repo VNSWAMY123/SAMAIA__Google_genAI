@@ -1,6 +1,7 @@
 # MIT License
 
-Copyright (c) 2025 Global Youth Wellness
+Copyright (c) 2025 SAMAIA
+Authors: V N Swamy, Priya Vijay Palekar, Krupasham S Jadhav, Srinidhi N, Divya Sharma
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
