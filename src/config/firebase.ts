@@ -36,6 +36,11 @@ console.log("Firebase config loaded:", {
   projectId: firebaseConfig.projectId
 });
 
+// Configure auth settings for production
+if (import.meta.env.PROD) {
+  console.log("Production mode: Firebase auth configured for", window.location.hostname);
+}
+
 // Only connect to emulator in development
 if (import.meta.env.NODE_ENV === "development") {
   console.log("Development mode detected");
