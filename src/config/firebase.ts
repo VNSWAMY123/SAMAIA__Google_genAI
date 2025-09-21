@@ -1,6 +1,12 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, connectAuthEmulator } from "firebase/auth";
 
+// Debug environment variables
+console.log("Environment variables check:", {
+  VITE_FIREBASE_API_KEY: import.meta.env.VITE_FIREBASE_API_KEY ? "✓ Found" : "✗ Missing",
+  NODE_ENV: import.meta.env.NODE_ENV || "development"
+});
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY || "AIzaSyCp-hqPwkmx0KkNYVxFBmrOg7ePVtJTpPM",
@@ -12,6 +18,12 @@ const firebaseConfig = {
   measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID || "G-5FGE63BSXL",
 };
 
+// Validate API key before initializing
+if (!firebaseConfig.apiKey || firebaseConfig.apiKey === "undefined") {
+  console.error("Firebase API key is missing or invalid!");
+  throw new Error("Firebase configuration error: API key is required");
+}
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
@@ -19,13 +31,14 @@ const auth = getAuth(app);
 // Debug: Log configuration status
 console.log("Firebase config loaded:", {
   hasApiKey: !!firebaseConfig.apiKey,
+  apiKeyLength: firebaseConfig.apiKey?.length,
   authDomain: firebaseConfig.authDomain,
   projectId: firebaseConfig.projectId
 });
 
 // Only connect to emulator in development
-if (process.env.NODE_ENV === "development") {
-  console.log("Using auth emulator");
+if (import.meta.env.NODE_ENV === "development") {
+  console.log("Development mode detected");
 }
 
 export { auth };
